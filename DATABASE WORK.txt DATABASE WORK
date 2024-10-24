@@ -1,0 +1,179 @@
+mysql> CREATE DATA BASE RUHANDE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATA BASE RUHANDE' at line 1
+mysql> create database RUHANDE;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use RUHANDE;
+Database changed
+mysql> create table NGOMA;
+ERROR 4028 (HY000): A table must have at least one visible column.
+mysql> create table NGOMA ( ID int (20), F_NAME CHAR(10), L_NAME CHAR(10), GENDER CHAR(20), PROVINCE CHAR (20), DISTRICT CHAR (20), SECTOR CHAR (20), CELL CHAR (15), EMAIL CHAR(20), TELEPHONE INT(15));
+Query OK, 0 rows affected, 2 warnings (0.02 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200234567890123,'NZIZA', 'FRED', 'MALE', 'EAST', 'KAYONZA', 'MURUNDI','BUHABWA', 'FRED5@GMAIL.COM', 0783124567);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200434567890123,'NTWALI', 'FRANK', 'MALE', 'WEST', 'RUSIZI', 'MWILI','GAKO', 'NTWALI5@GMAIL.COM', 0788124567);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200534567890123,'NTARE', 'KIM', 'MALE', 'WEST', 'RUBAVU', 'GATORE','GISATI', 'KIM9@GMAIL.COM', 0788824567);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> SELECT*FROM NGOMA;
++------------+--------+--------+--------+----------+----------+---------+---------+-------------------+-----------+
+| ID         | F_NAME | L_NAME | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL    | EMAIL             | TELEPHONE |
++------------+--------+--------+--------+----------+----------+---------+---------+-------------------+-----------+
+| 2147483647 | NZIZA  | FRED   | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | FRED5@GMAIL.COM   | 783124567 |
+| 2147483647 | NTWALI | FRANK  | MALE   | WEST     | RUSIZI   | MWILI   | GAKO    | NTWALI5@GMAIL.COM | 788124567 |
+| 2147483647 | NTARE  | KIM    | MALE   | WEST     | RUBAVU   | GATORE  | GISATI  | KIM9@GMAIL.COM    | 788824567 |
++------------+--------+--------+--------+----------+----------+---------+---------+-------------------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200634567890123,'NTAREGA', 'KENNY', 'FEMALE', 'SOUTH', 'HUYE', 'TUMBA','GAKONI', 'KEN10@GMAIL.COM', 0788894567);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200634567890123,'KEZA', 'ANNITA', 'FEMALE', 'SOUTH', 'HUYE', 'TUMBA','GAKONI', 'ANNITA10@GMAIL.COM', 0788341112);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200834567890123,'KAMI', 'FIFI', 'FEMALE', 'SOUTH', 'HUYE', 'TUMBA','GAKONI', 'FIFI12@GMAIL.COM', 0788348112);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200834567890123,'GATESI', 'ANNICK', 'FEMALE', 'SOUTH', 'HUYE', 'TUMBA','GAKONI', 'ANNICK12@GMAIL.COM', 0788348812);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200034567890123,'KUKUNDA', 'JACK', 'MALE', 'SOUTH', 'HUYE', 'TUMBA','GAKONI', 'KUKU12@GMAIL.COM', 0788348818);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200034567890123,'TETA', 'PHIONAH', 'FEMALE', 'SOUTH', 'HUYE', 'TUMBA','GAKONI', 'PHION@GMAIL.COM', 0788348818);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES(1200934567890123,'MANZI', 'JOEL', 'MALE', 'EAST', 'KAYONZA', 'MURUNDI','BUHABWA', 'MANZI6@GMAIL.COM', 0788340818);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> SELECT*FROM NGOMA;
++------------+---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+
+| ID         | F_NAME  | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL    | EMAIL              | TELEPHONE |
++------------+---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+
+| 2147483647 | NZIZA   | FRED    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | FRED5@GMAIL.COM    | 783124567 |
+| 2147483647 | NTWALI  | FRANK   | MALE   | WEST     | RUSIZI   | MWILI   | GAKO    | NTWALI5@GMAIL.COM  | 788124567 |
+| 2147483647 | NTARE   | KIM     | MALE   | WEST     | RUBAVU   | GATORE  | GISATI  | KIM9@GMAIL.COM     | 788824567 |
+| 2147483647 | NTAREGA | KENNY   | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | KEN10@GMAIL.COM    | 788894567 |
+| 2147483647 | KEZA    | ANNITA  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNITA10@GMAIL.COM | 788341112 |
+| 2147483647 | KAMI    | FIFI    | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | FIFI12@GMAIL.COM   | 788348112 |
+| 2147483647 | GATESI  | ANNICK  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNICK12@GMAIL.COM | 788348812 |
+| 2147483647 | KUKUNDA | JACK    | MALE   | SOUTH    | HUYE     | TUMBA   | GAKONI  | KUKU12@GMAIL.COM   | 788348818 |
+| 2147483647 | TETA    | PHIONAH | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | PHION@GMAIL.COM    | 788348818 |
+| 2147483647 | MANZI   | JOEL    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | MANZI6@GMAIL.COM   | 788340818 |
++------------+---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA DROP ID;
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT*FROM NGOMA;
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+
+| F_NAME  | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL    | EMAIL              | TELEPHONE |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+
+| NZIZA   | FRED    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | FRED5@GMAIL.COM    | 783124567 |
+| NTWALI  | FRANK   | MALE   | WEST     | RUSIZI   | MWILI   | GAKO    | NTWALI5@GMAIL.COM  | 788124567 |
+| NTARE   | KIM     | MALE   | WEST     | RUBAVU   | GATORE  | GISATI  | KIM9@GMAIL.COM     | 788824567 |
+| NTAREGA | KENNY   | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | KEN10@GMAIL.COM    | 788894567 |
+| KEZA    | ANNITA  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNITA10@GMAIL.COM | 788341112 |
+| KAMI    | FIFI    | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | FIFI12@GMAIL.COM   | 788348112 |
+| GATESI  | ANNICK  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNICK12@GMAIL.COM | 788348812 |
+| KUKUNDA | JACK    | MALE   | SOUTH    | HUYE     | TUMBA   | GAKONI  | KUKU12@GMAIL.COM   | 788348818 |
+| TETA    | PHIONAH | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | PHION@GMAIL.COM    | 788348818 |
+| MANZI   | JOEL    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | MANZI6@GMAIL.COM   | 788340818 |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD ID INT(20);
+Query OK, 10 rows affected, 1 warning (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> SELECT*FROM NGOMA;
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------+
+| F_NAME  | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL    | EMAIL              | TELEPHONE | ID   |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------+
+| NZIZA   | FRED    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | FRED5@GMAIL.COM    | 783124567 | NULL |
+| NTWALI  | FRANK   | MALE   | WEST     | RUSIZI   | MWILI   | GAKO    | NTWALI5@GMAIL.COM  | 788124567 | NULL |
+| NTARE   | KIM     | MALE   | WEST     | RUBAVU   | GATORE  | GISATI  | KIM9@GMAIL.COM     | 788824567 | NULL |
+| NTAREGA | KENNY   | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | KEN10@GMAIL.COM    | 788894567 | NULL |
+| KEZA    | ANNITA  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNITA10@GMAIL.COM | 788341112 | NULL |
+| KAMI    | FIFI    | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | FIFI12@GMAIL.COM   | 788348112 | NULL |
+| GATESI  | ANNICK  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNICK12@GMAIL.COM | 788348812 | NULL |
+| KUKUNDA | JACK    | MALE   | SOUTH    | HUYE     | TUMBA   | GAKONI  | KUKU12@GMAIL.COM   | 788348818 | NULL |
+| TETA    | PHIONAH | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | PHION@GMAIL.COM    | 788348818 | NULL |
+| MANZI   | JOEL    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | MANZI6@GMAIL.COM   | 788340818 | NULL |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET ID=182220303030303;
+Query OK, 10 rows affected, 10 warnings (0.00 sec)
+Rows matched: 10  Changed: 10  Warnings: 10
+
+mysql> SELECT*FROM NGOMA;
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------------+
+| F_NAME  | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL    | EMAIL              | TELEPHONE | ID         |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------------+
+| NZIZA   | FRED    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | FRED5@GMAIL.COM    | 783124567 | 2147483647 |
+| NTWALI  | FRANK   | MALE   | WEST     | RUSIZI   | MWILI   | GAKO    | NTWALI5@GMAIL.COM  | 788124567 | 2147483647 |
+| NTARE   | KIM     | MALE   | WEST     | RUBAVU   | GATORE  | GISATI  | KIM9@GMAIL.COM     | 788824567 | 2147483647 |
+| NTAREGA | KENNY   | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | KEN10@GMAIL.COM    | 788894567 | 2147483647 |
+| KEZA    | ANNITA  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNITA10@GMAIL.COM | 788341112 | 2147483647 |
+| KAMI    | FIFI    | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | FIFI12@GMAIL.COM   | 788348112 | 2147483647 |
+| GATESI  | ANNICK  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNICK12@GMAIL.COM | 788348812 | 2147483647 |
+| KUKUNDA | JACK    | MALE   | SOUTH    | HUYE     | TUMBA   | GAKONI  | KUKU12@GMAIL.COM   | 788348818 | 2147483647 |
+| TETA    | PHIONAH | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | PHION@GMAIL.COM    | 788348818 | 2147483647 |
+| MANZI   | JOEL    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | MANZI6@GMAIL.COM   | 788340818 | 2147483647 |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT* FROM NGOMA WHERE GENDER='FEMALE' AND DISTRICT='HUYE';
++---------+---------+--------+----------+----------+--------+--------+--------------------+-----------+------------+
+| F_NAME  | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR | CELL   | EMAIL              | TELEPHONE | ID         |
++---------+---------+--------+----------+----------+--------+--------+--------------------+-----------+------------+
+| NTAREGA | KENNY   | FEMALE | SOUTH    | HUYE     | TUMBA  | GAKONI | KEN10@GMAIL.COM    | 788894567 | 2147483647 |
+| KEZA    | ANNITA  | FEMALE | SOUTH    | HUYE     | TUMBA  | GAKONI | ANNITA10@GMAIL.COM | 788341112 | 2147483647 |
+| KAMI    | FIFI    | FEMALE | SOUTH    | HUYE     | TUMBA  | GAKONI | FIFI12@GMAIL.COM   | 788348112 | 2147483647 |
+| GATESI  | ANNICK  | FEMALE | SOUTH    | HUYE     | TUMBA  | GAKONI | ANNICK12@GMAIL.COM | 788348812 | 2147483647 |
+| TETA    | PHIONAH | FEMALE | SOUTH    | HUYE     | TUMBA  | GAKONI | PHION@GMAIL.COM    | 788348818 | 2147483647 |
++---------+---------+--------+----------+----------+--------+--------+--------------------+-----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT* FROM NGOMA WHERE GENDER='MALE' OR DISTRICT='HUYE';
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------------+
+| F_NAME  | L_NAME  | GENDER | PROVINCE | DISTRICT | SECTOR  | CELL    | EMAIL              | TELEPHONE | ID         |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------------+
+| NZIZA   | FRED    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | FRED5@GMAIL.COM    | 783124567 | 2147483647 |
+| NTWALI  | FRANK   | MALE   | WEST     | RUSIZI   | MWILI   | GAKO    | NTWALI5@GMAIL.COM  | 788124567 | 2147483647 |
+| NTARE   | KIM     | MALE   | WEST     | RUBAVU   | GATORE  | GISATI  | KIM9@GMAIL.COM     | 788824567 | 2147483647 |
+| NTAREGA | KENNY   | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | KEN10@GMAIL.COM    | 788894567 | 2147483647 |
+| KEZA    | ANNITA  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNITA10@GMAIL.COM | 788341112 | 2147483647 |
+| KAMI    | FIFI    | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | FIFI12@GMAIL.COM   | 788348112 | 2147483647 |
+| GATESI  | ANNICK  | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | ANNICK12@GMAIL.COM | 788348812 | 2147483647 |
+| KUKUNDA | JACK    | MALE   | SOUTH    | HUYE     | TUMBA   | GAKONI  | KUKU12@GMAIL.COM   | 788348818 | 2147483647 |
+| TETA    | PHIONAH | FEMALE | SOUTH    | HUYE     | TUMBA   | GAKONI  | PHION@GMAIL.COM    | 788348818 | 2147483647 |
+| MANZI   | JOEL    | MALE   | EAST     | KAYONZA  | MURUNDI | BUHABWA | MANZI6@GMAIL.COM   | 788340818 | 2147483647 |
++---------+---------+--------+----------+----------+---------+---------+--------------------+-----------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT F_NAME,L_NAME,PROVINCE FROM NGOMA;
++---------+---------+----------+
+| F_NAME  | L_NAME  | PROVINCE |
++---------+---------+----------+
+| NZIZA   | FRED    | EAST     |
+| NTWALI  | FRANK   | WEST     |
+| NTARE   | KIM     | WEST     |
+| NTAREGA | KENNY   | SOUTH    |
+| KEZA    | ANNITA  | SOUTH    |
+| KAMI    | FIFI    | SOUTH    |
+| GATESI  | ANNICK  | SOUTH    |
+| KUKUNDA | JACK    | SOUTH    |
+| TETA    | PHIONAH | SOUTH    |
+| MANZI   | JOEL    | EAST     |
++---------+---------+----------+
+10 rows in set (0.00 sec)
+
+mysql>
